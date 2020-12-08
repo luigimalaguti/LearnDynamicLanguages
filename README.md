@@ -36,21 +36,50 @@ Per concludere, una volta terminato l'utilizzo del virtual environment, si può 
 
 Il repository tratterà i seguenti argomenti:
 
-1. Linguaggio Python avanzato
-    - Caratteristiche di base
-    - Strutture dati e controllo
-    - Classi e oggetti
-    - Programmazione funzionale
-    - Metaprogramming
+1. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
+    - [Caratteristiche di base](1_LinguaggioPython/1_Caratteristiche_di_base.ipynb)
+    - [Strutture dati e controllo](1_LinguaggioPython/2_Strutture_dati_e_controllo.ipynb)
+    - [Classi e oggetti](1_LinguaggioPython/3_Classi_e_oggetti.ipynb)
     - Attributi e descrittori
-2. Architettura di un interprete
+    - Creazione degli oggetti
+    - Metaprogramming
+    - Programmazione funzionale
+    - Complementi sugli oggetti
+2. [Architettura di un interprete](2_Architettura/README.md)
     - Analisi lessicale, espressioni regolari e automi
     - Analisi sintattica, grammaticale
     - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
     - Disegno del frontend di un semplice linguaggio
-3. Caratteristiche generali di un linguaggio dinamico
+3. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
     - Tipizzazione
     - Gestione della memoria
     - Metaprogramming
     - Gestione degli errori
+
+## Suggerimento ordine degli argomenti
+
+Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argomenti nel seguente ordine:
+
+1. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
+    - [Caratteristiche di base](1_LinguaggioPython/1_Caratteristiche_di_base.ipynb)
+    - [Strutture dati e controllo](1_LinguaggioPython/2_Strutture_dati_e_controllo.ipynb)
+    - [Classi e oggetti](1_LinguaggioPython/3_Classi_e_oggetti.ipynb)
+2. [Architettura di un interprete](2_Architettura/README.md)
+    - Analisi lessicale, espressioni regolari e automi
+    - Analisi sintattica, grammaticale
+    - Gestione dei simboli e analisi semantica
+    - Rappresentazione intermedia, AST e Bytecode
+    - Disegno del frontend di un semplice linguaggio
+3. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
+    - Attributi e descrittori
+    - Creazione degli oggetti
+    - Metaprogramming
+4. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
+    - Tipizzazione
+    - Gestione della memoria
+    - Metaprogramming
+    - Gestione degli errori
+5. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
+    - Programmazione funzionale
+    - Complementi sugli oggetti
