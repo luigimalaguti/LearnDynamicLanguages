@@ -47,7 +47,7 @@ Il repository tratterà i seguenti argomenti:
     - Complementi sugli oggetti
 2. [Architettura di un interprete](2_Architettura/README.md)
     - [Compilatori e interpreti](2_Architettura/1_Compilatori_e_interpreti.ipynb)
-    - Analisi lessicale, espressioni regolari e automi
+    - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
     - Analisi sintattica, grammaticale
     - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
@@ -68,7 +68,7 @@ Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argoment
     - [Classi e oggetti](1_LinguaggioPython/3_Classi_e_oggetti.ipynb)
 2. [Architettura di un interprete](2_Architettura/README.md)
     - [Compilatori e interpreti](2_Architettura#1_Compilatori_e_interpreti.ipynb)
-    - Analisi lessicale, espressioni regolari e automi
+    - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
     - Analisi sintattica, grammaticale
     - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
