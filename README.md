@@ -48,7 +48,7 @@ Il repository tratterà i seguenti argomenti:
 2. [Architettura di un interprete](2_Architettura/README.md)
     - [Compilatori e interpreti](2_Architettura/1_Compilatori_e_interpreti.ipynb)
     - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
-    - Analisi sintattica, grammaticale
+    - [Analisi sintattica, grammatiche](2_Architettura/3_Analisi_sintattica.ipynb)
     - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
     - Disegno del frontend di un semplice linguaggio
@@ -69,7 +69,7 @@ Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argoment
 2. [Architettura di un interprete](2_Architettura/README.md)
     - [Compilatori e interpreti](2_Architettura#1_Compilatori_e_interpreti.ipynb)
     - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
-    - Analisi sintattica, grammaticale
+    - [Analisi sintattica, grammatiche](2_Architettura/3_Analisi_sintattica.ipynb)
     - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
     - Disegno del frontend di un semplice linguaggio
