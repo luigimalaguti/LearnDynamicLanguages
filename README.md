@@ -49,9 +49,8 @@ Il repository tratterà i seguenti argomenti:
     - [Compilatori e interpreti](2_Architettura/1_Compilatori_e_interpreti.ipynb)
     - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
     - [Analisi sintattica, grammatiche](2_Architettura/3_Analisi_sintattica.ipynb)
-    - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
-    - Disegno del frontend di un semplice linguaggio
+    - Il linguaggio PERL
 3. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
     - Tipizzazione
     - Gestione della memoria
@@ -70,9 +69,8 @@ Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argoment
     - [Compilatori e interpreti](2_Architettura#1_Compilatori_e_interpreti.ipynb)
     - [Analisi lessicale, espressioni regolari](2_Architettura/2_Analisi_lessicale.ipynb)
     - [Analisi sintattica, grammatiche](2_Architettura/3_Analisi_sintattica.ipynb)
-    - Gestione dei simboli e analisi semantica
     - Rappresentazione intermedia, AST e Bytecode
-    - Disegno del frontend di un semplice linguaggio
+    - Il linguaggio PERL
 3. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
     - Attributi e descrittori
     - Creazione degli oggetti
