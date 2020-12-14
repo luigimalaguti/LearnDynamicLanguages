@@ -1,0 +1,743 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statement_list
+Rule 2     statement_list -> statement_list SEP statement
+Rule 3     statement_list -> statement
+Rule 4     statement -> <empty>
+Rule 5     statement -> assignment
+Rule 6     statement -> expression
+Rule 7     statement -> printstmt
+Rule 8     assignment -> ID ASSIGN expression
+Rule 9     printstmt -> PRINT LPAR expression RPAR
+Rule 10    expression -> expression PLUS term
+Rule 11    expression -> expression MINUS term
+Rule 12    expression -> term
+Rule 13    term -> term MUL power
+Rule 14    term -> term DIV power
+Rule 15    term -> power
+Rule 16    power -> factor POW power
+Rule 17    power -> factor
+Rule 18    factor -> ID
+Rule 19    factor -> NUMBER
+Rule 20    factor -> LPAR expression RPAR
+Rule 21    factor -> MINUS factor
+Rule 22    factor -> PI
+Rule 23    factor -> SQRT LPAR expression RPAR
+
+Terminals, with rules where they appear
+
+ASSIGN               : 8
+DIV                  : 14
+ID                   : 8 18
+LPAR                 : 9 20 23
+MINUS                : 11 21
+MUL                  : 13
+NUMBER               : 19
+PI                   : 22
+PLUS                 : 10
+POW                  : 16
+PRINT                : 9
+RPAR                 : 9 20 23
+SEP                  : 2
+SQRT                 : 23
+error                : 
+
+Nonterminals, with rules where they appear
+
+assignment           : 5
+expression           : 6 8 9 10 11 20 23
+factor               : 16 17 21
+power                : 13 14 15 16
+printstmt            : 7
+program              : 0
+statement            : 2 3
+statement_list       : 1 2
+term                 : 10 11 12 13 14
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . statement_list
+    (2) statement_list -> . statement_list SEP statement
+    (3) statement_list -> . statement
+    (4) statement -> .
+    (5) statement -> . assignment
+    (6) statement -> . expression
+    (7) statement -> . printstmt
+    (8) assignment -> . ID ASSIGN expression
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (9) printstmt -> . PRINT LPAR expression RPAR
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    SEP             reduce using rule 4 (statement -> .)
+    $end            reduce using rule 4 (statement -> .)
+    ID              shift and go to state 7
+    PRINT           shift and go to state 10
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    program                        shift and go to state 1
+    statement_list                 shift and go to state 2
+    statement                      shift and go to state 3
+    assignment                     shift and go to state 4
+    expression                     shift and go to state 5
+    printstmt                      shift and go to state 6
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> statement_list .
+    (2) statement_list -> statement_list . SEP statement
+
+    $end            reduce using rule 1 (program -> statement_list .)
+    SEP             shift and go to state 17
+
+
+state 3
+
+    (3) statement_list -> statement .
+
+    SEP             reduce using rule 3 (statement_list -> statement .)
+    $end            reduce using rule 3 (statement_list -> statement .)
+
+
+state 4
+
+    (5) statement -> assignment .
+
+    SEP             reduce using rule 5 (statement -> assignment .)
+    $end            reduce using rule 5 (statement -> assignment .)
+
+
+state 5
+
+    (6) statement -> expression .
+    (10) expression -> expression . PLUS term
+    (11) expression -> expression . MINUS term
+
+    SEP             reduce using rule 6 (statement -> expression .)
+    $end            reduce using rule 6 (statement -> expression .)
+    PLUS            shift and go to state 18
+    MINUS           shift and go to state 19
+
+
+state 6
+
+    (7) statement -> printstmt .
+
+    SEP             reduce using rule 7 (statement -> printstmt .)
+    $end            reduce using rule 7 (statement -> printstmt .)
+
+
+state 7
+
+    (8) assignment -> ID . ASSIGN expression
+    (18) factor -> ID .
+
+    ASSIGN          shift and go to state 20
+    POW             reduce using rule 18 (factor -> ID .)
+    MUL             reduce using rule 18 (factor -> ID .)
+    DIV             reduce using rule 18 (factor -> ID .)
+    PLUS            reduce using rule 18 (factor -> ID .)
+    MINUS           reduce using rule 18 (factor -> ID .)
+    SEP             reduce using rule 18 (factor -> ID .)
+    $end            reduce using rule 18 (factor -> ID .)
+
+
+state 8
+
+    (12) expression -> term .
+    (13) term -> term . MUL power
+    (14) term -> term . DIV power
+
+    PLUS            reduce using rule 12 (expression -> term .)
+    MINUS           reduce using rule 12 (expression -> term .)
+    SEP             reduce using rule 12 (expression -> term .)
+    $end            reduce using rule 12 (expression -> term .)
+    RPAR            reduce using rule 12 (expression -> term .)
+    MUL             shift and go to state 21
+    DIV             shift and go to state 22
+
+
+state 9
+
+    (21) factor -> MINUS . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    factor                         shift and go to state 23
+
+state 10
+
+    (9) printstmt -> PRINT . LPAR expression RPAR
+
+    LPAR            shift and go to state 25
+
+
+state 11
+
+    (20) factor -> LPAR . expression RPAR
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    expression                     shift and go to state 26
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 12
+
+    (15) term -> power .
+
+    MUL             reduce using rule 15 (term -> power .)
+    DIV             reduce using rule 15 (term -> power .)
+    PLUS            reduce using rule 15 (term -> power .)
+    MINUS           reduce using rule 15 (term -> power .)
+    SEP             reduce using rule 15 (term -> power .)
+    $end            reduce using rule 15 (term -> power .)
+    RPAR            reduce using rule 15 (term -> power .)
+
+
+state 13
+
+    (16) power -> factor . POW power
+    (17) power -> factor .
+
+    POW             shift and go to state 27
+    MUL             reduce using rule 17 (power -> factor .)
+    DIV             reduce using rule 17 (power -> factor .)
+    PLUS            reduce using rule 17 (power -> factor .)
+    MINUS           reduce using rule 17 (power -> factor .)
+    SEP             reduce using rule 17 (power -> factor .)
+    $end            reduce using rule 17 (power -> factor .)
+    RPAR            reduce using rule 17 (power -> factor .)
+
+
+state 14
+
+    (19) factor -> NUMBER .
+
+    POW             reduce using rule 19 (factor -> NUMBER .)
+    MUL             reduce using rule 19 (factor -> NUMBER .)
+    DIV             reduce using rule 19 (factor -> NUMBER .)
+    PLUS            reduce using rule 19 (factor -> NUMBER .)
+    MINUS           reduce using rule 19 (factor -> NUMBER .)
+    SEP             reduce using rule 19 (factor -> NUMBER .)
+    $end            reduce using rule 19 (factor -> NUMBER .)
+    RPAR            reduce using rule 19 (factor -> NUMBER .)
+
+
+state 15
+
+    (22) factor -> PI .
+
+    POW             reduce using rule 22 (factor -> PI .)
+    MUL             reduce using rule 22 (factor -> PI .)
+    DIV             reduce using rule 22 (factor -> PI .)
+    PLUS            reduce using rule 22 (factor -> PI .)
+    MINUS           reduce using rule 22 (factor -> PI .)
+    SEP             reduce using rule 22 (factor -> PI .)
+    $end            reduce using rule 22 (factor -> PI .)
+    RPAR            reduce using rule 22 (factor -> PI .)
+
+
+state 16
+
+    (23) factor -> SQRT . LPAR expression RPAR
+
+    LPAR            shift and go to state 28
+
+
+state 17
+
+    (2) statement_list -> statement_list SEP . statement
+    (4) statement -> .
+    (5) statement -> . assignment
+    (6) statement -> . expression
+    (7) statement -> . printstmt
+    (8) assignment -> . ID ASSIGN expression
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (9) printstmt -> . PRINT LPAR expression RPAR
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    SEP             reduce using rule 4 (statement -> .)
+    $end            reduce using rule 4 (statement -> .)
+    ID              shift and go to state 7
+    PRINT           shift and go to state 10
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    statement                      shift and go to state 29
+    assignment                     shift and go to state 4
+    expression                     shift and go to state 5
+    printstmt                      shift and go to state 6
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 18
+
+    (10) expression -> expression PLUS . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    term                           shift and go to state 30
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 19
+
+    (11) expression -> expression MINUS . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    term                           shift and go to state 31
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 20
+
+    (8) assignment -> ID ASSIGN . expression
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    expression                     shift and go to state 32
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 21
+
+    (13) term -> term MUL . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    power                          shift and go to state 33
+    factor                         shift and go to state 13
+
+state 22
+
+    (14) term -> term DIV . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    power                          shift and go to state 34
+    factor                         shift and go to state 13
+
+state 23
+
+    (21) factor -> MINUS factor .
+
+    POW             reduce using rule 21 (factor -> MINUS factor .)
+    MUL             reduce using rule 21 (factor -> MINUS factor .)
+    DIV             reduce using rule 21 (factor -> MINUS factor .)
+    PLUS            reduce using rule 21 (factor -> MINUS factor .)
+    MINUS           reduce using rule 21 (factor -> MINUS factor .)
+    SEP             reduce using rule 21 (factor -> MINUS factor .)
+    $end            reduce using rule 21 (factor -> MINUS factor .)
+    RPAR            reduce using rule 21 (factor -> MINUS factor .)
+
+
+state 24
+
+    (18) factor -> ID .
+
+    POW             reduce using rule 18 (factor -> ID .)
+    MUL             reduce using rule 18 (factor -> ID .)
+    DIV             reduce using rule 18 (factor -> ID .)
+    PLUS            reduce using rule 18 (factor -> ID .)
+    MINUS           reduce using rule 18 (factor -> ID .)
+    SEP             reduce using rule 18 (factor -> ID .)
+    $end            reduce using rule 18 (factor -> ID .)
+    RPAR            reduce using rule 18 (factor -> ID .)
+
+
+state 25
+
+    (9) printstmt -> PRINT LPAR . expression RPAR
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    expression                     shift and go to state 35
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 26
+
+    (20) factor -> LPAR expression . RPAR
+    (10) expression -> expression . PLUS term
+    (11) expression -> expression . MINUS term
+
+    RPAR            shift and go to state 36
+    PLUS            shift and go to state 18
+    MINUS           shift and go to state 19
+
+
+state 27
+
+    (16) power -> factor POW . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    factor                         shift and go to state 13
+    power                          shift and go to state 37
+
+state 28
+
+    (23) factor -> SQRT LPAR . expression RPAR
+    (10) expression -> . expression PLUS term
+    (11) expression -> . expression MINUS term
+    (12) expression -> . term
+    (13) term -> . term MUL power
+    (14) term -> . term DIV power
+    (15) term -> . power
+    (16) power -> . factor POW power
+    (17) power -> . factor
+    (18) factor -> . ID
+    (19) factor -> . NUMBER
+    (20) factor -> . LPAR expression RPAR
+    (21) factor -> . MINUS factor
+    (22) factor -> . PI
+    (23) factor -> . SQRT LPAR expression RPAR
+
+    ID              shift and go to state 24
+    NUMBER          shift and go to state 14
+    LPAR            shift and go to state 11
+    MINUS           shift and go to state 9
+    PI              shift and go to state 15
+    SQRT            shift and go to state 16
+
+    expression                     shift and go to state 38
+    term                           shift and go to state 8
+    power                          shift and go to state 12
+    factor                         shift and go to state 13
+
+state 29
+
+    (2) statement_list -> statement_list SEP statement .
+
+    SEP             reduce using rule 2 (statement_list -> statement_list SEP statement .)
+    $end            reduce using rule 2 (statement_list -> statement_list SEP statement .)
+
+
+state 30
+
+    (10) expression -> expression PLUS term .
+    (13) term -> term . MUL power
+    (14) term -> term . DIV power
+
+    PLUS            reduce using rule 10 (expression -> expression PLUS term .)
+    MINUS           reduce using rule 10 (expression -> expression PLUS term .)
+    SEP             reduce using rule 10 (expression -> expression PLUS term .)
+    $end            reduce using rule 10 (expression -> expression PLUS term .)
+    RPAR            reduce using rule 10 (expression -> expression PLUS term .)
+    MUL             shift and go to state 21
+    DIV             shift and go to state 22
+
+
+state 31
+
+    (11) expression -> expression MINUS term .
+    (13) term -> term . MUL power
+    (14) term -> term . DIV power
+
+    PLUS            reduce using rule 11 (expression -> expression MINUS term .)
+    MINUS           reduce using rule 11 (expression -> expression MINUS term .)
+    SEP             reduce using rule 11 (expression -> expression MINUS term .)
+    $end            reduce using rule 11 (expression -> expression MINUS term .)
+    RPAR            reduce using rule 11 (expression -> expression MINUS term .)
+    MUL             shift and go to state 21
+    DIV             shift and go to state 22
+
+
+state 32
+
+    (8) assignment -> ID ASSIGN expression .
+    (10) expression -> expression . PLUS term
+    (11) expression -> expression . MINUS term
+
+    SEP             reduce using rule 8 (assignment -> ID ASSIGN expression .)
+    $end            reduce using rule 8 (assignment -> ID ASSIGN expression .)
+    PLUS            shift and go to state 18
+    MINUS           shift and go to state 19
+
+
+state 33
+
+    (13) term -> term MUL power .
+
+    MUL             reduce using rule 13 (term -> term MUL power .)
+    DIV             reduce using rule 13 (term -> term MUL power .)
+    PLUS            reduce using rule 13 (term -> term MUL power .)
+    MINUS           reduce using rule 13 (term -> term MUL power .)
+    SEP             reduce using rule 13 (term -> term MUL power .)
+    $end            reduce using rule 13 (term -> term MUL power .)
+    RPAR            reduce using rule 13 (term -> term MUL power .)
+
+
+state 34
+
+    (14) term -> term DIV power .
+
+    MUL             reduce using rule 14 (term -> term DIV power .)
+    DIV             reduce using rule 14 (term -> term DIV power .)
+    PLUS            reduce using rule 14 (term -> term DIV power .)
+    MINUS           reduce using rule 14 (term -> term DIV power .)
+    SEP             reduce using rule 14 (term -> term DIV power .)
+    $end            reduce using rule 14 (term -> term DIV power .)
+    RPAR            reduce using rule 14 (term -> term DIV power .)
+
+
+state 35
+
+    (9) printstmt -> PRINT LPAR expression . RPAR
+    (10) expression -> expression . PLUS term
+    (11) expression -> expression . MINUS term
+
+    RPAR            shift and go to state 39
+    PLUS            shift and go to state 18
+    MINUS           shift and go to state 19
+
+
+state 36
+
+    (20) factor -> LPAR expression RPAR .
+
+    POW             reduce using rule 20 (factor -> LPAR expression RPAR .)
+    MUL             reduce using rule 20 (factor -> LPAR expression RPAR .)
+    DIV             reduce using rule 20 (factor -> LPAR expression RPAR .)
+    PLUS            reduce using rule 20 (factor -> LPAR expression RPAR .)
+    MINUS           reduce using rule 20 (factor -> LPAR expression RPAR .)
+    SEP             reduce using rule 20 (factor -> LPAR expression RPAR .)
+    $end            reduce using rule 20 (factor -> LPAR expression RPAR .)
+    RPAR            reduce using rule 20 (factor -> LPAR expression RPAR .)
+
+
+state 37
+
+    (16) power -> factor POW power .
+
+    MUL             reduce using rule 16 (power -> factor POW power .)
+    DIV             reduce using rule 16 (power -> factor POW power .)
+    PLUS            reduce using rule 16 (power -> factor POW power .)
+    MINUS           reduce using rule 16 (power -> factor POW power .)
+    SEP             reduce using rule 16 (power -> factor POW power .)
+    $end            reduce using rule 16 (power -> factor POW power .)
+    RPAR            reduce using rule 16 (power -> factor POW power .)
+
+
+state 38
+
+    (23) factor -> SQRT LPAR expression . RPAR
+    (10) expression -> expression . PLUS term
+    (11) expression -> expression . MINUS term
+
+    RPAR            shift and go to state 40
+    PLUS            shift and go to state 18
+    MINUS           shift and go to state 19
+
+
+state 39
+
+    (9) printstmt -> PRINT LPAR expression RPAR .
+
+    SEP             reduce using rule 9 (printstmt -> PRINT LPAR expression RPAR .)
+    $end            reduce using rule 9 (printstmt -> PRINT LPAR expression RPAR .)
+
+
+state 40
+
+    (23) factor -> SQRT LPAR expression RPAR .
+
+    POW             reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    MUL             reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    DIV             reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    PLUS            reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    MINUS           reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    SEP             reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    $end            reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+    RPAR            reduce using rule 23 (factor -> SQRT LPAR expression RPAR .)
+

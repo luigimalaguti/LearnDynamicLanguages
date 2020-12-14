@@ -25,6 +25,9 @@
     - [Abstract syntaxt tree](3_Analisi_sintattica.ipynb#Abstract-syntaxt-tree)
     - [Parsing bottom up](3_Analisi_sintattica.ipynb#Parsing-bottom-up)
     - [Generatori di parser](3_Analisi_sintattica.ipynb#Generatori-di-parser)
-4. Gestione dei simboli e analisi semantica
-5. Rappresentazione intermedia, AST e Bytecode
-6. Disegno del frontend di un semplice linguaggio
+4. [Rappresentazione intermedia, AST e Bytecode](4_Rappresentazione_intermedia.ipynb)
+    - [Rappresentazione intermedia](4_Rappresentazione_intermedia.ipynb#Rappresentazione-intermedia)
+    - [Regole per la costruzione dell'AST](4_Rappresentazione_intermedia.ipynb#Regole-per-la-costruzione-dell-AST)
+    - [Il formato su disco](4_Rappresentazione_intermedia.ipynb#Il-formato-su-disco)
+    - [L'interprete](4_Rappresentazione_intermedia.ipynb#L-interprete)
+5. Il linguaggio PERL
