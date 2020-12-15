@@ -30,4 +30,12 @@
     - [Regole per la costruzione dell'AST](4_Rappresentazione_intermedia.ipynb#Regole-per-la-costruzione-dell-AST)
     - [Il formato su disco](4_Rappresentazione_intermedia.ipynb#Il-formato-su-disco)
     - [L'interprete](4_Rappresentazione_intermedia.ipynb#L-interprete)
-5. Il linguaggio PERL
+5. [Il linguaggio PERL](5_PERL.ipynb)
+    - [Variabili](5_PERL.ipynb#Variabili)
+    - [Global e lexical scope](5_PERL.ipynb#Global-e-lexical-scope)
+    - [Funzioni e I/O](5_PERL.ipynb#Funzioni-e-IO)
+    - [Iterazioni](5_PERL.ipynb#Iterazioni)
+    - [Il concetto di contesto](5_PERL.ipynb#Il-concetto-di-contesto)
+    - [Espressioni regolari](5_PERL.ipynb#Espressioni-regolari)
+    - [Costruzione dell'AST del Pers](5_PERL.ipynb#Costruzione-dell-AST-del-Perl)
+    - [Interpretazione](5_PERL.ipynb#Interpretazione)
