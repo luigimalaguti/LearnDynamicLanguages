@@ -30,7 +30,9 @@
     - [Naming convention](3_Classi_e_oggetti.ipynb#Naming-convention)
     - [Inserimento nuove variabili](3_Classi_e_oggetti.ipynb#Inserimento-nuove-variabili)
     - [Information hiding](3_Classi_e_oggetti.ipynb#Information-hiding)
-4. Attributi e descrittori
+4. [Attributi e descrittori](4_Attributi_e_descrittori.ipynb)
+    - [Protocollo di accesso agli attributi](4_Attributi_e_descrittori.ipynb#Protocollo-di-accesso-agli-attributi)
+    - [Descrittori](4_Attributi_e_descrittori.ipynb#Descrittori)
 5. Creazione degli oggetti
 6. Metaprogramming
 7. Programmazione funzionale
