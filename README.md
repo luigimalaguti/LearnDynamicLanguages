@@ -41,7 +41,7 @@ Il repository tratterà i seguenti argomenti:
     - [Strutture dati e controllo](1_LinguaggioPython/2_Strutture_dati_e_controllo.ipynb)
     - [Classi e oggetti](1_LinguaggioPython/3_Classi_e_oggetti.ipynb)
     - [Attributi e descrittori](1_LinguaggioPython/4_Attributi_e_descrittori.ipynb)
-    - Creazione degli oggetti
+    - [Creazione degli oggetti](1_LinguaggioPython/5_Creazione_degli_oggetti.ipynb)
     - Metaprogramming
     - Programmazione funzionale
     - Complementi sugli oggetti
@@ -73,7 +73,7 @@ Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argoment
     - [Il linguaggio PERL](5_PERL.ipynb)
 3. [Linguaggio Python avanzato](1_LinguaggioPython/README.md)
     - [Attributi e descrittori](1_LinguaggioPython/4_Attributi_e_descrittori.ipynb)
-    - Creazione degli oggetti
+    - [Creazione degli oggetti](1_LinguaggioPython/5_Creazione_degli_oggetti.ipynb)
     - Metaprogramming
 4. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
     - Tipizzazione
