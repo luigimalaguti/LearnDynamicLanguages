@@ -35,8 +35,11 @@
     - [Descrittori](4_Attributi_e_descrittori.ipynb#Descrittori)
 5. [Creazione degli oggetti](5_Creazione_degli_oggetti.ipynb)
     - [\__call\__ come decoratore](5_Creazione_degli_oggetti.ipynb#__call___come_decoratore)
-    - [Le classi come oggetti e la loro creazione](5_Creazione_degli_oggetti.ipynb#Le_classi_come_oggetti_e_la_loro_creazione)
+    - [Le classi come oggetti e la loro creazione](5_Creazione_degli_oggetti.ipynb#Le-classi-come-oggetti-e-la-loro-creazione)
     - [Metaclassi](5_Creazione_degli_oggetti.ipynb#Metaclassi)
-6. Metaprogramming
+6. [Metaprogramming](6_Metaprogramming.ipynb)
+    - [Introspection](6_Metaprogramming.ipynb#Introspection)
+    - [Reflection](6_Metaprogramming.ipynb#Reflection)
+    - [Gestione degli errori](6_Metaprogramming.ipynb#Gestione-degli-errori)
 7. Programmazione funzionale
 8. Complementi sugli oggetti
