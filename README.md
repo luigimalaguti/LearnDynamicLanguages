@@ -52,7 +52,7 @@ Il repository tratterà i seguenti argomenti:
     - [Rappresentazione intermedia, AST e Bytecode](2_Architettura/4_Rappresentazione_intermedia.ipynb)
     - [Il linguaggio PERL](5_PERL.ipynb)
 3. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
-    - Tipizzazione
+    - [Tipizzazione](3_LinguaggioDinamico/1_Tipizzazione.ipynb)
     - Gestione della memoria
     - Metaprogramming
     - Gestione degli errori
@@ -76,7 +76,7 @@ Personalmente ho seguito il corso di Linguaggi Dinamici affrontando gli argoment
     - [Creazione degli oggetti](1_LinguaggioPython/5_Creazione_degli_oggetti.ipynb)
     - [Metaprogramming](1_LinguaggioPython/6_Metaprogramming.ipynb)
 4. [Caratteristiche generali di un linguaggio dinamico](3_LinguaggioDinamico/README.md)
-    - Tipizzazione
+    - [Tipizzazione](3_LinguaggioDinamico/1_Tipizzazione.ipynb)
     - Gestione della memoria
     - Metaprogramming
     - Gestione degli errori
